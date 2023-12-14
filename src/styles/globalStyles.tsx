@@ -1,6 +1,20 @@
 import { css } from "@emotion/react";
 
-const global = css``;
+const global = css`
+  .contanier-content-page {
+    max-width: 1200px;
+    margin: 140px auto;
+    padding: 30px;
+  }
+  :root {
+    --bg-primary-color: black;
+  }
+  body {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+`;
 
 const reset = css`
   html,

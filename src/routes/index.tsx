@@ -6,7 +6,11 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LayoutGlobal />}>
-          <Route index path="/" element={<p>teste</p>} />
+          <Route
+            index
+            path="/"
+            element={<p className="contanier-content-page">teste</p>}
+          />
           <Route path="/test" element={<p>PAGINA TESTE</p>} />
         </Route>
       </Routes>
