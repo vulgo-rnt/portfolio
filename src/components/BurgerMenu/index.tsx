@@ -1,3 +1,4 @@
+import { AccountCircle, Code, ContactMail } from "@mui/icons-material";
 import {
   IconButton,
   Menu,
@@ -6,8 +7,9 @@ import {
   alpha,
   styled,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Squash as IconMenu } from "hamburger-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
@@ -55,12 +57,29 @@ const StyledMenu = styled((props: MenuProps) => (
 export default function BurgerMenu({ navItems }: { navItems: string[] }) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const navigate = useNavigate();
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const iconItem = (item: string) => {
+    switch (item) {
+      case "Contato":
+        return <ContactMail />;
+        break;
+      case "Projetos":
+        return <Code />;
+        break;
+      case "Sobre":
+        return <AccountCircle />;
+        break;
+    }
+  };
+
   return (
     <>
       <IconButton
@@ -74,7 +93,7 @@ export default function BurgerMenu({ navItems }: { navItems: string[] }) {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
       >
-        <MenuIcon />
+        <IconMenu size={20} toggled={open} />
       </IconButton>
       <StyledMenu
         id="demo-customized-menu"
@@ -87,7 +106,15 @@ export default function BurgerMenu({ navItems }: { navItems: string[] }) {
       >
         {navItems.map((item) => {
           return (
-            <MenuItem key={item} onClick={handleClose} disableRipple>
+            <MenuItem
+              key={item}
+              onClick={() => {
+                navigate(`/${item.toLocaleLowerCase()}`);
+                handleClose();
+              }}
+              disableRipple
+            >
+              {iconItem(item)}
               {item}
             </MenuItem>
           );

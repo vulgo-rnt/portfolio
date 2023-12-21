@@ -1,11 +1,6 @@
 import { css } from "@emotion/react";
 
 const global = css`
-  .contanier-content-page {
-    max-width: 1200px;
-    margin: 140px auto;
-    padding: 30px;
-  }
   :root {
     --bg-primary-color: black;
   }

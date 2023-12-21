@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, useScrollTrigger } from "@mui/material";
-import NavMenu from "../NavMenu";
+import Nav from "../Nav";
 import styled from "@emotion/styled";
 import useScreenSize from "../../hooks/useScreenSize";
 
@@ -18,7 +18,7 @@ export default function Header() {
         variant={scroll}
       >
         <p>imagem</p>
-        <NavMenu width={width}></NavMenu>
+        <Nav width={width}></Nav>
       </ToolbarStyled>
     </AppBar>
   );
