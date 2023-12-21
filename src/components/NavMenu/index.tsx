@@ -1,10 +1,11 @@
-import useScreenSize from "../../hooks/useScreenSize";
+import BurgerMenu from "../BurgerMenu";
 
-export default function NavMenu() {
-  const { width } = useScreenSize();
-  if (width < 300) {
-    return <p>300px</p>;
+export default function NavMenu({ width }: { width: number }) {
+  const navItems = ["Home", "About", "Contact"];
+
+  if (width < 990) {
+    return <BurgerMenu navItems={navItems} />;
   } else {
-    return <p>mais de 300px</p>;
+    return <p>- 990px</p>;
   }
 }

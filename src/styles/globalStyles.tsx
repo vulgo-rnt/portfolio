@@ -13,6 +13,8 @@ const global = css`
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-size: 20px;
+    font-style: normal;
   }
 `;
 
