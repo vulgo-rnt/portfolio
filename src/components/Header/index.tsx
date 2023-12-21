@@ -2,6 +2,7 @@ import { AppBar, Toolbar, useScrollTrigger } from "@mui/material";
 import Nav from "../Nav";
 import styled from "@emotion/styled";
 import useScreenSize from "../../hooks/useScreenSize";
+import Logo from "../Logo";
 
 const ToolbarStyled = styled(Toolbar)`
   display: flex;
@@ -17,7 +18,7 @@ export default function Header() {
         style={{ transition: "min-height 0.2s ease" }}
         variant={scroll}
       >
-        <p>imagem</p>
+        <Logo width={width} />
         <Nav width={width}></Nav>
       </ToolbarStyled>
     </AppBar>

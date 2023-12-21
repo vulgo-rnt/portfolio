@@ -86,7 +86,6 @@ export default function BurgerMenu({ navItems }: { navItems: string[] }) {
         edge="start"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 2 }}
         onClick={handleClick}
         id="demo-customized-button"
         aria-controls={open ? "demo-customized-menu" : undefined}
