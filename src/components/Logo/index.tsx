@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import letter from "../../assets/letter.png";
+import { useNavigate } from "react-router-dom";
 
 const ContanierLogo = styled.div`
   @font-face {
@@ -19,8 +20,14 @@ const ContanierLogo = styled.div`
 `;
 
 export default function Logo({ width }: { width: number }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
+
   return (
-    <ContanierLogo>
+    <ContanierLogo onClick={handleClick}>
       <img src={letter} />
       {width > 380 && <p>enan .t</p>}
     </ContanierLogo>
