@@ -1,6 +1,7 @@
 import Card from "../../components/Card";
 
 export default function Home() {
+  //test styles
   return (
     <>
       <Card initial img="">
@@ -9,7 +10,9 @@ export default function Home() {
         ab modi sit, amet maxime qui repellat id quas earum!
       </Card>
       <br />
-      <Card img="">sdadasdsdadasdasa</Card>
+      <Card img="https://img.freepik.com/fotos-premium/lindo-cachorrinho_943963-408.jpg?w=740">
+        sdadasdsdadasdasa
+      </Card>
     </>
   );
 }

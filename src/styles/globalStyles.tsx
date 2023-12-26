@@ -10,6 +10,29 @@ const global = css`
     list-style: none;
     font-size: 20px;
     font-style: normal;
+    font-family: "inter";
+  }
+  @font-face {
+    font-family: "tag";
+    src: url("font/StreetGraffity.ttf");
+  }
+  @font-face {
+    font-family: "inter";
+    src: url("font/Inter.ttf");
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: grey;
   }
 `;
 

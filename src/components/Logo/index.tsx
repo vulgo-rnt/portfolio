@@ -3,10 +3,6 @@ import letter from "../../assets/letter.png";
 import { useNavigate } from "react-router-dom";
 
 const ContanierLogo = styled.div`
-  @font-face {
-    font-family: "tag";
-    src: url("StreetGraffity.ttf");
-  }
   img {
     height: 2.5em;
   }

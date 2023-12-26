@@ -11,10 +11,16 @@ const CardStyled = styled.section<{ initial: boolean }>`
   display: flex;
   flex-direction: column;
   background-color: #d2e6f8;
+  text-align: center;
   border-radius: 20px;
   padding: 50px;
+  gap: 30px;
+
+  img {
+    max-width: 100%;
+  }
   @media (max-width: 600px) {
-    padding-top: ${({ initial }) => (initial ? "120px" : "20px")};
+    padding-top: ${({ initial }) => (initial ? "120px" : "50px")};
     border-radius: ${({ initial }) => (initial ? "0 0 20px 20px" : "20px")};
   }
 `;
