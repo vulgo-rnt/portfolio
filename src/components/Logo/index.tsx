@@ -13,6 +13,7 @@ const ContanierLogo = styled.div`
   }
   font-family: "tag";
   display: flex;
+  cursor: pointer;
 `;
 
 export default function Logo({ width }: { width: number }) {
