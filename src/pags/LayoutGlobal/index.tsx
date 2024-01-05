@@ -7,7 +7,6 @@ import styled from "@emotion/styled";
 
 const ContanierContantPage = styled.main`
   max-width: 1200px;
-  height: 2000px; //test
   margin: 140px auto;
   padding: 30px;
   @media (max-width: 600px) {

@@ -2,32 +2,20 @@ import Card from "../../components/Card";
 import SectionAnimated from "../../components/SectionAnimated";
 
 export default function Home() {
-  //test styles
   return (
     <>
-      <Card initial img="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est explicabo
-        rerum aperiam iure quasi animi optio molestiae? Aperiam cumque, incidunt
-        ab modi sit, amet maxime qui repellat id quas earum! Lorem ipsum, dolor
-        sit amet consectetur adipisicing elit. Obcaecati dolore quibusdam, eaque
-        sed doloremque reprehenderit laudantium. Nobis fugit ullam, reiciendis
-        magni ipsum cupiditate ratione fuga laborum iure aliquam, recusandae
-        molestias! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
-        eius perspiciatis quam nam voluptas dolores omnis voluptatibus
-        reprehenderit eveniet, distinctio tenetur reiciendis obcaecati quod
-        sapiente animi corrupti explicabo illo? Deserunt! Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Cumque nam explicabo asperiores ullam
-        ea repellendus labore maxime amet beatae est iure ex odit, enim iusto
-        dolor adipisci pariatur saepe eaque! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Minus minima ipsa quibusdam labore
-        ratione, maiores sapiente officiis doloribus non deleniti. Dicta iure
-        pariatur quidem eaque voluptas earum commodi sit quod! Lorem ipsum dolor
-        sit, amet consectetur adipisicing elit. Aspernatur, quos iusto, a eaque
-        debitis corrupti molestiae sunt quidem id facere nesciunt est,
-        consectetur doloribus. Consectetur in sint at sequi doloremque! Lorem
-        ipsum dolor sit amet, consectetur adipisicing elit. Atque veniam vitae
-        eveniet. Deserunt hic accusamus quasi, cupiditate ea eos atque vero
-        culpa, quo nisi et pariatur veritatis doloremque. Provident, eveniet?
+      <Card initial>
+        <h1>Desenvolvedor Web</h1>
+        <br />
+        <p>
+          Olá meu nome é Renan, tenho 22 anos e estou empenhado em me tornar o
+          melhor desenvolvimento web. Nos últimos meses, tenho me dedicado a
+          aprender e praticar linguagens essenciais para a construção de
+          aplicações web usando as melhores tecnologias do mercado como{" "}
+          <strong>Html</strong>, <strong>Css</strong>,{" "}
+          <strong>Javascript</strong>, <strong>Typescript</strong>,{" "}
+          <strong>React</strong>, etc...
+        </p>
       </Card>
       <br />
       <SectionAnimated direction="right">

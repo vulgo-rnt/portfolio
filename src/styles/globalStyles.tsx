@@ -2,16 +2,20 @@ import { css } from "@emotion/react";
 
 const global = css`
   :root {
-    --bg-primary-color: black;
+    --bg-card-primary: #d2e6f8;
   }
+
   body {
+    color: #252525;
+    overflow-x: hidden;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-size: 20px;
-    font-style: normal;
     font-family: "inter";
   }
+
+  //import fonts
   @font-face {
     font-family: "tag";
     src: url("font/StreetGraffity.ttf");
@@ -21,6 +25,7 @@ const global = css`
     src: url("font/Inter.ttf");
   }
 
+  //scrollbar
   * {
     scrollbar-width: thin;
     scrollbar-color: grey transparent;
@@ -121,7 +126,6 @@ const reset = css`
   select {
     background: transparent;
     border: 0;
-    font-size: 100%;
     margin: 0;
     outline: 0;
     padding: 0;

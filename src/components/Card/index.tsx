@@ -3,18 +3,20 @@ import { ReactElement } from "react";
 
 interface CardProps {
   initial?: boolean;
-  children: string | ReactElement;
+  children: string | ReactElement | ReactElement[];
   img?: string;
 }
 
 const CardStyled = styled.section<{ initial: boolean }>`
   display: flex;
   flex-direction: column;
-  background-color: #d2e6f8;
+  background-color: var(--bg-card-primary);
   text-align: center;
+  letter-spacing: 0.4px;
   border-radius: 20px;
-  padding: 50px;
+  padding: 60px;
   gap: 30px;
+  line-height: 30px;
 
   img {
     max-width: 100%;
