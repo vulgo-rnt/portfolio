@@ -5,12 +5,13 @@ interface CardProps {
   initial?: boolean;
   children: string | ReactElement | ReactElement[];
   img?: string;
+  color?: "primary" | "secondary";
 }
 
 const CardStyled = styled.section<{ initial: boolean }>`
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-card-primary);
+  background-color: ${({ color }) => `var(--bg-card-${color})`};
   text-align: center;
   letter-spacing: 0.4px;
   border-radius: 20px;
@@ -27,9 +28,14 @@ const CardStyled = styled.section<{ initial: boolean }>`
   }
 `;
 
-export default function Card({ children, img, initial = false }: CardProps) {
+export default function Card({
+  children,
+  img,
+  initial = false,
+  color = "primary",
+}: CardProps) {
   return (
-    <CardStyled initial={initial}>
+    <CardStyled initial={initial} color={color}>
       <div>{children}</div>
       {img && (
         <div>

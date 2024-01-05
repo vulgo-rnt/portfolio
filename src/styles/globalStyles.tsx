@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 const global = css`
   :root {
     --bg-card-primary: #d2e6f8;
+    --bg-card-secondary: yellow;
   }
 
   body {
