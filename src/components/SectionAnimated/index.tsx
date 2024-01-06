@@ -20,15 +20,15 @@ export default function SectionAnimated({
 }: PropsComponent) {
   //te odeio matematica
   const scroll = useScrollPosition();
-  const { width, height } = useScreenSize();
+  const { width } = useScreenSize();
   const progressAnimate = width - scroll * 2;
   const positionElement = progressAnimate > 0 ? progressAnimate : 0;
 
-  const top = document.getElementById("test")?.getBoundingClientRect().top;
+  //const top = document.getElementById("test")?.getBoundingClientRect().top;
 
   return (
     <Contanier direction={direction} id="test">
-      <motion.div animate={{ x: 0 }}>{top}</motion.div>
+      <motion.div animate={{ x: positionElement }}>{children}</motion.div>
     </Contanier>
   );
 }
