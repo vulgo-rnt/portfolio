@@ -1,23 +1,33 @@
 import { AppBar, Toolbar, useScrollTrigger } from "@mui/material";
 import Nav from "../Nav";
-import useScreenSize from "../../hooks/useScreenSize";
 import Logo from "../Logo";
 
 export default function Header() {
-  const scroll = useScrollTrigger() ? "dense" : "regular";
-  const { width } = useScreenSize();
+  const scroll = useScrollTrigger();
+  const variantToolBar = scroll ? "dense" : "regular";
+
   return (
-    <AppBar color="transparent" position="fixed" component={"header"}>
+    <AppBar
+      style={{
+        backgroundColor: "transparent",
+        color: "var(--color-text-default)",
+        backdropFilter: "blur(5px)",
+        boxShadow: "none",
+        borderBottom: scroll ? "0.1px solid rgba(0,0,0,0.2)" : "none",
+      }}
+      position="fixed"
+      component={"header"}
+    >
       <Toolbar
         style={{
           display: "flex",
           justifyContent: "space-between",
-          transition: "min-height 0.4s ease",
+          transition: "min-height border-bottom 0.4s ease",
         }}
-        variant={scroll}
+        variant={variantToolBar}
       >
-        <Logo width={width} />
-        <Nav width={width}></Nav>
+        <Logo />
+        <Nav></Nav>
       </Toolbar>
     </AppBar>
   );
