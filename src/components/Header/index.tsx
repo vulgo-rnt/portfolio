@@ -1,10 +1,11 @@
-import { AppBar, Toolbar, useScrollTrigger } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import Nav from "../Nav";
 import Logo from "../Logo";
+import useScrollPosition from "../../hooks/useScrollPosition";
 
 export default function Header() {
-  const scroll = useScrollTrigger();
-  const variantToolBar = scroll ? "dense" : "regular";
+  const scroll = useScrollPosition();
+  const variantToolBar = scroll > 0 ? "dense" : "regular";
 
   return (
     <AppBar
@@ -13,7 +14,7 @@ export default function Header() {
         color: "var(--color-text-default)",
         boxShadow: "none",
         borderBottom: scroll ? "0.1px solid rgba(0,0,0,0.2)" : "none",
-        transition: "background-color 0.1s linear",
+        transition: "background-color 0.2s linear",
       }}
       position="fixed"
       component={"header"}
