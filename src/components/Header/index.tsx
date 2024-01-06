@@ -9,11 +9,11 @@ export default function Header() {
   return (
     <AppBar
       style={{
-        backgroundColor: "transparent",
+        backgroundColor: scroll ? "white" : "transparent",
         color: "var(--color-text-default)",
-        backdropFilter: "blur(5px)",
         boxShadow: "none",
         borderBottom: scroll ? "0.1px solid rgba(0,0,0,0.2)" : "none",
+        transition: "background-color 0.1s linear",
       }}
       position="fixed"
       component={"header"}
@@ -22,7 +22,8 @@ export default function Header() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          transition: "min-height border-bottom 0.4s ease",
+          transitionProperty: "min-height border-bottom",
+          transitionDuration: "0.6s",
         }}
         variant={variantToolBar}
       >
