@@ -19,13 +19,9 @@ export default function Home() {
       </Card>
       <br />
       <SectionAnimated direction="right">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsum
-        perspiciatis officia nobis pariatur ducimus dignissimos, iste voluptatem
-        reprehenderit sequi fuga consequatur facere odit illo! Adipisci amet
-        autem fuga eos. Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit. Quibusdam at voluptatibus vel enim vitae odit repellat quae
-        tenetur earum. Sit voluptatibus placeat veritatis adipisci incidunt
-        magni odio nemo eaque ab?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos nihil,
+        corporis officiis vel ad deleniti quam excepturi quo corrupti accusamus,
+        facilis quae libero at, pariatur fugit magni maiores ab magnam.lorem
       </SectionAnimated>
     </>
   );

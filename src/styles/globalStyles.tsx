@@ -8,6 +8,7 @@ const global = css`
   }
 
   body {
+    height: 3000px; //test scroll
     color: #252525;
     overflow-x: hidden;
     box-sizing: border-box;
