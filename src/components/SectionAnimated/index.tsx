@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { ReactElement } from "react";
 
 interface PropsComponent {
-  children: string | ReactElement;
+  children: string | ReactElement | ReactElement[];
   direction: "left" | "right";
 }
 

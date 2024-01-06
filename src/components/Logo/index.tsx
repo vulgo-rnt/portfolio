@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import letter from "../../assets/letter.png";
 import { useNavigate } from "react-router-dom";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const ContanierLogo = styled.div`
   img {
@@ -16,7 +17,8 @@ const ContanierLogo = styled.div`
   cursor: pointer;
 `;
 
-export default function Logo({ width }: { width: number }) {
+export default function Logo() {
+  const { width } = useScreenSize();
   const navigate = useNavigate();
 
   const handleClick = () => {

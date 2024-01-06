@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 
 const global = css`
   :root {
+    --color-text-default: #252525;
     --bg-card-primary: #d2e6f8;
     --bg-card-secondary: yellow;
   }
