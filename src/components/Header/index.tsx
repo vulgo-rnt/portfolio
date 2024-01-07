@@ -15,6 +15,7 @@ export default function Header() {
         boxShadow: "none",
         borderBottom: scroll ? "0.1px solid rgba(0,0,0,0.2)" : "none",
         transition: "background-color 0.2s linear",
+        boxSizing: "border-box",
       }}
       position="fixed"
       component={"header"}

@@ -1,34 +1,39 @@
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
 import { ReactElement } from "react";
-import useScrollPosition from "../../hooks/useScrollPosition";
 import useScreenSize from "../../hooks/useScreenSize";
+import useScrollPosition from "../../hooks/useScrollPosition";
 
 interface PropsComponent {
   children: string | ReactElement | ReactElement[];
   direction: "left" | "right";
+  width: number;
+  scroll: number;
 }
 
 const Contanier = styled.section<PropsComponent>`
   background-color: beige;
   height: 200px;
+  width: ${({ width }) => `${width * 2}px`};
+  padding-left: ${({ scroll }) => `${scroll}px`};
 `;
 
 export default function SectionAnimated({
   children,
   direction,
 }: PropsComponent) {
-  //te odeio matematica
-  const scroll = useScrollPosition();
   const { width } = useScreenSize();
-  const progressAnimate = width - scroll * 2;
-  const positionElement = progressAnimate > 0 ? progressAnimate : 0;
-
-  //const top = document.getElementById("test")?.getBoundingClientRect().top;
+  const scroll = useScrollPosition();
+  const seletor = document.getElementById("SectionAnimate");
+  const top = seletor ? seletor.getBoundingClientRect().top : 0;
 
   return (
-    <Contanier direction={direction} id="test">
-      <motion.div animate={{ x: positionElement }}>{children}</motion.div>
+    <Contanier
+      width={width}
+      scroll={top}
+      direction={direction}
+      id="SectionAnimate"
+    >
+      {children}
     </Contanier>
   );
 }
