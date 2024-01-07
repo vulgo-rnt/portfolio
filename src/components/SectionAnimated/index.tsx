@@ -23,6 +23,7 @@ export default function SectionAnimated({
 }: PropsComponent) {
   const { width } = useScreenSize();
   const scroll = useScrollPosition();
+  console.log(scroll);
   const seletor = document.getElementById("SectionAnimate");
   const top = seletor ? seletor.getBoundingClientRect().top : 0;
 
