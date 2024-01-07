@@ -2,8 +2,9 @@ import { Outlet } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { Global } from "@emotion/react";
-import { global, reset } from "../../styles/globalStyles";
 import styled from "@emotion/styled";
+import reset from "../../styles/resetStyles";
+import global from "../../styles/globalStyles";
 
 const ContanierContantPage = styled.main`
   max-width: 1200px;
