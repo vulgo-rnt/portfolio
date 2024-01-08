@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import useScreenSize from "../../hooks/useScreenSize";
-import useScrollPosition from "../../hooks/useScrollPosition";
 
 interface PropsComponent {
   children: string | ReactElement | ReactElement[];
@@ -13,28 +12,34 @@ interface PropsStyles {
 
 const Contanier = styled.section`
   background-color: beige;
-  height: 200px;
-  width: 100vw;
+  height: 40px;
+  padding: 40px;
   position: relative;
+  overflow: hidden;
 `;
 const ContanierScroll = styled.span<PropsStyles>`
   position: absolute;
-  left: ${({ scroll }) => `${scroll}px`};
+  left: ${({ scroll }) => `${scroll}%`};
+  transition: all 0.8s ease;
 `;
 
 export default function SectionAnimated({
   children,
   direction,
 }: PropsComponent) {
-  const { width } = useScreenSize();
-  const scroll = useScrollPosition();
-  console.log(scroll, children, direction); //test
-  const seletor = document.getElementById("SectionAnimate");
-  const top = seletor ? seletor.getBoundingClientRect().top : 0;
+  const { height, width } = useScreenSize();
+  const [scroll, setScroll] = useState(100);
+
+  document.addEventListener("scroll", () => {
+    const elementRef = document.getElementById("SectionAnimate");
+    const relativeToTheTopPage = elementRef?.getBoundingClientRect().top || 0;
+    const percentageElementToTheScreen = (relativeToTheTopPage / height) * 100;
+    setScroll(percentageElementToTheScreen);
+  });
 
   return (
     <Contanier id="SectionAnimate">
-      <ContanierScroll scroll={top}>{width}</ContanierScroll>
+      <ContanierScroll scroll={scroll}>{scroll}</ContanierScroll>
     </Contanier>
   );
 }
