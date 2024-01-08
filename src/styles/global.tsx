@@ -11,7 +11,6 @@ const global = css`
     height: 3000px; //test scroll
     color: #252525;
     overflow-x: hidden;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-size: 20px;
