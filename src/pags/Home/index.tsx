@@ -19,9 +19,12 @@ export default function Home() {
       </Card>
       <br />
       <SectionAnimated direction="left" effectScala>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos nihil,
-        corporis officiis vel ad deleniti quam excepturi quo corrupti accusamus,
-        facilis quae libero at, pariatur fugit magni maiores ab magnam.lorem
+        <Card>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+          eos optio non quidem, maiores modi consequuntur harum ipsa hic
+          corrupti nulla perferendis commodi quo, accusamus architecto ducimus
+          dolorum. Deserunt, aliquam!
+        </Card>
       </SectionAnimated>
       <br />
       <br />
