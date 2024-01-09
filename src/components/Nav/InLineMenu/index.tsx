@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { handleClickNavigate } from "../handleClickNavigate";
 import { useNavigate } from "react-router-dom";
 
 const SectionStyled = styled.section`
@@ -11,12 +12,12 @@ const SectionStyled = styled.section`
 `;
 
 export default function InLineMenu({ navItems }: { navItems: string[] }) {
-  const navegate = useNavigate();
+  const navigate = useNavigate();
   return (
     <SectionStyled>
       {navItems.map((item) => {
         return (
-          <p key={item} onClick={() => navegate(`/${item.toLowerCase()}`)}>
+          <p key={item} onClick={() => handleClickNavigate(item, navigate)}>
             {item}
           </p>
         );

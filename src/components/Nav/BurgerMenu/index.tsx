@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { Squash as IconMenu } from "hamburger-react";
 import { useState } from "react";
+import { handleClickNavigate } from "../handleClickNavigate";
 import { useNavigate } from "react-router-dom";
 
 const StyledMenu = styled((props: MenuProps) => (
@@ -57,7 +58,7 @@ const StyledMenu = styled((props: MenuProps) => (
 export default function BurgerMenu({ navItems }: { navItems: string[] }) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -70,13 +71,10 @@ export default function BurgerMenu({ navItems }: { navItems: string[] }) {
     switch (item) {
       case "Contato":
         return <ContactMail />;
-        break;
       case "Projetos":
         return <Code />;
-        break;
       case "Sobre":
         return <AccountCircle />;
-        break;
     }
   };
 
@@ -108,7 +106,7 @@ export default function BurgerMenu({ navItems }: { navItems: string[] }) {
             <MenuItem
               key={item}
               onClick={() => {
-                navigate(`/${item.toLocaleLowerCase()}`);
+                handleClickNavigate(item, navigate);
                 handleClose();
               }}
               disableRipple
