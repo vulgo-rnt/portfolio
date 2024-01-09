@@ -30,7 +30,7 @@ export default function SectionAnimated({
     } else {
       animateControls.start("hidden");
     }
-  }, [isInView]);
+  }, [isInView, animateControls]);
 
   return (
     <Contanier ref={ref}>

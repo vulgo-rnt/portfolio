@@ -58,7 +58,7 @@ const StyledMenu = styled((props: MenuProps) => (
 export default function BurgerMenu({ navItems }: { navItems: string[] }) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
