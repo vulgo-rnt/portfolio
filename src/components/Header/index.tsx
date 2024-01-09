@@ -29,7 +29,7 @@ export default function Header() {
         variant={variantToolBar}
       >
         <Logo />
-        <Nav></Nav>
+        <Nav />
       </Toolbar>
     </AppBar>
   );
