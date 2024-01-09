@@ -4,23 +4,48 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 interface PropsComponent {
   children: string | ReactElement | ReactElement[];
-  direction?: "left" | "right";
+  direction?: "left" | "right" | "up" | "down";
 }
 
 const Contanier = styled.section`
   background-color: beige;
-
   overflow: hidden;
   position: relative;
 `;
 
+const directionAnimate = (direction: string) => {
+  switch (direction) {
+    case "left":
+      return {
+        hidden: { opacity: 0, x: "100%" },
+        visible: { opacity: 1, x: 0 },
+      };
+    case "right":
+      return {
+        hidden: { opacity: 0, x: "-100%" },
+        visible: { opacity: 1, x: 0 },
+      };
+    case "up":
+      return {
+        hidden: { opacity: 0, y: "100%" },
+        visible: { opacity: 1, y: 0 },
+      };
+    case "down":
+      return {
+        hidden: { opacity: 0, y: "-100%" },
+        visible: { opacity: 1, y: 0 },
+      };
+  }
+};
+
 export default function SectionAnimated({
   children,
-  direction,
+  direction = "left",
 }: PropsComponent) {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const animateControls = useAnimation();
+  const variant = directionAnimate(direction);
 
   useEffect(() => {
     if (isInView) {
@@ -28,16 +53,12 @@ export default function SectionAnimated({
     } else {
       animateControls.start("hidden");
     }
-    console.log(isInView);
   }, [isInView]);
 
   return (
     <Contanier ref={ref}>
       <motion.div
-        variants={{
-          hidden: { opacity: 0, x: "100%" },
-          visible: { opacity: 1, x: 0 },
-        }}
+        variants={variant}
         initial="hidden"
         animate={animateControls}
         transition={{ duration: 1, delay: 0.2 }}
