@@ -10,7 +10,6 @@ interface PropsComponent {
 }
 
 const Contanier = styled.section`
-  background-color: beige;
   overflow: hidden;
   position: relative;
 `;
