@@ -29,6 +29,7 @@ const global = css`
 
   //scrollbar
   * {
+    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: grey transparent;
   }
