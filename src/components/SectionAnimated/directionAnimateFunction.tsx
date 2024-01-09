@@ -11,9 +11,9 @@ export default function directionAnimate(
     visible: { opacity: 1, y: 0 },
   };
   if (effectScala) {
-    Object.assign(templateHorizontal.hidden, { scale: 0.2 });
+    Object.assign(templateHorizontal.hidden, { scale: 0 });
     Object.assign(templateHorizontal.visible, { scale: 1 });
-    Object.assign(templateVertical.hidden, { scale: 0.2 });
+    Object.assign(templateVertical.hidden, { scale: 0 });
     Object.assign(templateVertical.visible, { scale: 1 });
   }
 
