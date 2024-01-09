@@ -18,7 +18,7 @@ export default function Home() {
         </p>
       </Card>
       <br />
-      <SectionAnimated direction="left">
+      <SectionAnimated direction="left" effectScala>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos nihil,
         corporis officiis vel ad deleniti quam excepturi quo corrupti accusamus,
         facilis quae libero at, pariatur fugit magni maiores ab magnam.lorem
