@@ -1,6 +1,6 @@
 import useScreenSize from "../../hooks/useScreenSize";
-import BurgerMenu from "../BurgerMenu";
-import InLineMenu from "../InLineMenu";
+import BurgerMenu from "./BurgerMenu";
+import InLineMenu from "./InLineMenu";
 
 export default function Nav() {
   const navItems = ["Projetos", "Sobre", "Contato"];
