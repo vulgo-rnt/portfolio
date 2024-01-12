@@ -1,4 +1,5 @@
 import Card from "../../components/Card";
+import HoverPopUp from "../../components/HoverPopUp";
 import SectionAnimated from "../../components/SectionAnimated";
 
 export default function Home() {
@@ -12,9 +13,26 @@ export default function Home() {
           melhor desenvolvimento web. Nos últimos meses, tenho me dedicado a
           aprender e praticar linguagens essenciais para a construção de
           aplicações web usando as melhores tecnologias do mercado como{" "}
-          <strong>Html</strong>, <strong>Css</strong>,{" "}
-          <strong>Javascript</strong>, <strong>Typescript</strong>,{" "}
-          <strong>React</strong>, etc...
+          <HoverPopUp img="https://img.icons8.com/color/48/html-5--v1.png">
+            Html
+          </HoverPopUp>
+          ,{" "}
+          <HoverPopUp img="https://img.icons8.com/color/48/css3.png">
+            Css
+          </HoverPopUp>
+          ,{" "}
+          <HoverPopUp img="https://img.icons8.com/color/48/javascript--v1.png">
+            Javascript
+          </HoverPopUp>
+          ,{" "}
+          <HoverPopUp img="https://img.icons8.com/fluency/48/typescript--v1.png">
+            Typescript
+          </HoverPopUp>
+          ,{" "}
+          <HoverPopUp img="https://img.icons8.com/ultraviolet/40/react--v1.png">
+            React
+          </HoverPopUp>
+          , etc...
         </p>
       </Card>
       <br />
